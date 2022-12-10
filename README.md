@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/melvinjunod/tf2killstreaktradingdatabase">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h3 align="center">TF2 Killstreak Trading Database</h3>
 
-## Available Scripts
+  <p align="center">
+    Keep track of your group's income and expenses when trading killstreak kits!
+  </p>
+</div>
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#moreinfo">More info about killstreak trading</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-### `npm run build`
+In the video game "Team Fortress 2", you can buy and sell in-game items for real money. Two of these items are Killstreak Kit Fabricators and Killstreak Kits. 
+Killstreak Kit Fabricators are recipes that require a number of other items to complete. When these Fabricators are completed, you can receive Killstreak Kits.
+Sometimes, the price to buy said fabricators and the items(hereon refered to as "materials") are cheaper than the lowest price the killstreak kit produced by the fabricator is curently being sold for. This way, it is possible to make a profit by buying fabricators and materials and selling the killstreak kits they produce.
+<br>
+This database and script allows you to keep track of the fabricators and materials you've bought, the prices of materials, kits currently on sale and kits that have been sold. 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- MORE INFO ABOUT KILLSTREAK TRADING -->
+## More info about killstreak trading
+Each killstreak kit and fabricator are tied to a "weapon", "sheen" and "killstreaker". What they are exactly is not as important, but each of these have a market value of their own. Different kits for different weapons have different prices, some sheens are more desired than others, etc.
+<br>
+Killstreak kits and fabricators have three different tiers:
+<ul>
+<li>Basic</li>
+<li>Specialized</li>
+<li>Professional</li>
+</ul>
+Basic kits are required to create specialized kits, which in turn are required to create professional kits. This database only manages professional kits since it is by far the most profitable to trade. Basic and specialized kits go into the list of materials - everything required to create a professional kit, except for the professional fabricator itself.
+<br>
+Materials are split into different types, and each type has multiple different individual items which may have different prices. Each professional fabricator requires a set number of each material type to complete but which material specifically is chosen randomly. The following amount of materials of a type are required to complete a professional fabricator from scratch:
+<ul>
+<li><b>64</b> Battle-worn Robo Part</li>
+<li><b>16</b> Reinforced Robo Part</li>
+<li><b>3</b> Pristine Robo Part</li>
+<li><b>4</b> Unique Weapons*</li>
+<li><b>2</b> Specialized Killstreak Kit Fabricators</li>
+<li><b>2</b> Basic Killstreak Kits</li>
+</ul>
+*The unique weapons must match the ones demanded by the basic and specialized killstreak kits, and are further split into two types: regular unique weapons, and expensive unique weapons. Regular unique weapons all share the same static price, but expensive unique weapons each have different prices that may change over time. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
